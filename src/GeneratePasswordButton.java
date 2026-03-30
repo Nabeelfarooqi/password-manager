@@ -50,6 +50,8 @@ public class GeneratePasswordButton {
             }
         });
 
+        tablePanel.add(new JScrollPane(table));
+
         try {
             ResultSet rs = DatabaseManager.getAllPasswords();
             while (rs.next()) {
@@ -61,6 +63,7 @@ public class GeneratePasswordButton {
             String site = siteField.getText();
             String user = userField.getText();
             String password = PasswordGenerator.generatePassword(12);
+            DatabaseManager.savePassword(site, user, password);
             model.addRow(new Object[] { site, user, password});
             siteField.setText("");
             userField.setText("");
