@@ -1,35 +1,37 @@
-Password Generator
+# Password Manager
 
 
 
-    A Java Swing desktop application that generates cryptographically secure passwords using SecureRandom.
+A Java Swing desktop application that generates cryptographically secure passwords and stores them locally using SQLite.
 
 
 
-Features
+## Features
 
-    Generates secure 12-character passwords
+- Generates secure 12-character passwords using SecureRandom
 
-    Guarantees at least one uppercase, lowercase, number, and special character
+- Makes sure there is at least one uppercase, lowercase, number, and special character
 
-    Simple one-click GUI
+- Save passwords with site and username
 
+- View all saved entries in a password.db file
 
-
-How to Run
-
-    Make sure when the files are setup in your IDE run from the GeneratePasswordButton.java
+- Local storage in SQLite
 
 
 
+## How to Run
+
+Either clone the entire repo or open the project into your personal IDE. Make sure to add sqlite-jdbc from Maven. Run `GeneratePasswordButton.java`
 
 
 
+## Files
 
+- `src/PasswordGenerator.java` — core password generation logic
 
+- `src/GeneratePasswordButton.java` — Swing GUI + database integration
 
-Files
+- `src/DatabaseManager.java` — SQLite connection and queries
 
-    src/PasswordGenerator.java` — core password generation logic
-
-    src/GeneratePasswordButton.java` — Swing GUI
+- `passwords.db` — auto-created on first run
