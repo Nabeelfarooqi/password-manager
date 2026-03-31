@@ -29,3 +29,4 @@ bin/
 ### Mac OS ###
 .DS_Storepasswords.db
 passwords.db
+.DS_Store
